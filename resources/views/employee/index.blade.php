@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Employee
+    Empleados
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('employees.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Nuevo Empleado') }}
                                 </a>
                               </div>
                         </div>
@@ -36,11 +36,11 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
-										<th>Lastname</th>
+										<th>Nombre</th>
+										<th>Apellido</th>
 										<th>Email</th>
 										<th>Birthday</th>
-										<th>Department</th>
+										<th>Departamento</th>
 
                                         <th></th>
                                     </tr>
@@ -58,11 +58,11 @@
 
                                             <td>
                                                 <form action="{{ route('employees.destroy',$employee->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('employees.show',$employee->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('employees.edit',$employee->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('employees.show',$employee->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('employees.edit',$employee->id) }}"><i class="fa fa-fw fa-edit"></i> Modificar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
                                                 </form>
                                             </td>
                                         </tr>

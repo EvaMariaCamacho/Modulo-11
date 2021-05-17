@@ -11,21 +11,21 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Employee</span>
+                            <span class="card-title">Datos Empleados</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('employees.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('employees.index') }}">Home</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Name:</strong>
+                            <strong>Nombre:</strong>
                             {{ $employee->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Lastname:</strong>
+                            <strong>Apellido:</strong>
                             {{ $employee->lastname }}
                         </div>
                         <div class="form-group">
@@ -37,7 +37,7 @@
                             {{ $employee->birthday }}
                         </div>
                         <div class="form-group">
-                            <strong>Department:</strong>
+                            <strong>Departamento:</strong>
                             {{ $employee->department }}
                         </div>
 
