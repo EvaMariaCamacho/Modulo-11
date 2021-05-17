@@ -22,9 +22,9 @@
             {!! $errors->first('birthday', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('puesto') }}
-            {{ Form::text('puesto', $employee->puesto, ['class' => 'form-control' . ($errors->has('puesto') ? ' is-invalid' : ''), 'placeholder' => 'Puesto']) }}
-            {!! $errors->first('puesto', '<div class="invalid-feedback">:message</p>') !!}
+            {{ Form::label('department') }}
+            {{ Form::text('department', $employee->department, ['class' => 'form-control' . ($errors->has('department') ? ' is-invalid' : ''), 'placeholder' => 'Department']) }}
+            {!! $errors->first('department', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
     </div>
