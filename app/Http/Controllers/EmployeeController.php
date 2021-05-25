@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 /**
  * Class EmployeeController
@@ -29,12 +30,13 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         $employee = new Employee();
         return view('employee.create', compact('employee'));
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      *
@@ -59,7 +61,7 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        $employee = Employee::find($id);
+        $employee = Employee::findOrfail($id);
 
         return view('employee.show', compact('employee'));
     }
