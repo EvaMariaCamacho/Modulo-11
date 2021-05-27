@@ -37,7 +37,7 @@
 
 
                     <ul class="navbar-nav mr-auto">
-                    <a class="nav-link" href="{{ route('employees.index') }}">{{ __('employee') }}</a>
+                    <a class="nav-link" href="{{ route('employees.index') }}">{{ __('empleados') }}</a>
                     </ul>
 
                     @endif
