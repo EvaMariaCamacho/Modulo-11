@@ -23,4 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/employees', App\Http\Controllers\EmployeeController::class)->middleware('auth');
 
+Route::get('/cookie/set', [App\Http\Controllers\CookieController::class, 'setCookie']);
+Route::get('/cookie/get', [App\Http\Controllers\CookieController::class, 'getCookie']);
 
