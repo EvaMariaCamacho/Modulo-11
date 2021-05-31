@@ -39,6 +39,12 @@ class Employee extends Model
      */
     protected $fillable = ['name','lastname','email','birthday','department'];
 
+  //Scope
 
+  public function scopeDepartment($query, $department)
+  {
+    if ($department)
+      return $query->where('department', 'LIKE', "%$department%");
+  }
 
 }
