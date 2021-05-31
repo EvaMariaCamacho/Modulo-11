@@ -7,6 +7,20 @@ Empleados
 @section('content')
 <div class="container-fluid">
     <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                    {{ Form::open(['route' => 'employees.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
+                    <div class="form-group">
+                        {{ Form::text('department', null, ['class' => 'form-control', 'placeholder' => 'department']) }}
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">
+                            <span>Buscar</span>
+                        </button>
+                    </div>
+                    {{ Form::close() }}
+            </div><br>
+        </div>
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
